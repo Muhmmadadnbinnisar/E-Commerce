@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-commerce Product List</title>
+  <style>
+    body {
+      background: linear-gradient(45deg, #1a2a6c, #b21f1f, #fdbb2d);
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: white;
+      text-align: center;
+      margin-top: 20px;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    #product-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    .product-card {
+      width: 250px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.2);  
+      backdrop-filter: blur(10px);  
+      border-radius: 15px;
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+      transform: rotate(-10deg); 
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+      position: relative;
+    }
+
+    .product-card h3 {
+      font-size: 1.8em;
+      color: white;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+    }
+
+    .product-card p {
+      font-size: 1.2em;
+      color: #f1f1f1;
+      margin-bottom: 10px;
+      opacity: 0.9;
+    }
+
+    .delete-button {
+      background: linear-gradient(45deg, #ff0077, #ffbb00);
+      border: none;
+      color: white;
+      padding: 12px 20px;
+      font-size: 1.2em;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+      transform: translateY(10px);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .delete-button:hover {
+      background: linear-gradient(45deg, #ffbb00, #ff0077);
+      transform: translateY(0px); 
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+    }
+
+    .product-card:hover {
+      transform: rotate(0deg); 
+      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .product-card:hover .delete-button {
+      background: linear-gradient(45deg, #ff0077, #ff00ff);
+    }
+    </style>
+</head>
+<body>
+    <h1>A SIMPLE E-COMMERCE PRODUCT LIST</h1>
+  <div id="product-container"></div>
+
+ <script src="app.js"></script>
+</body>
+</html>
